@@ -1,31 +1,17 @@
-/* -------------------------------------------------------------------------- */
-/*                                 Theme                                      */
-/* -------------------------------------------------------------------------- */
-/* prettier-ignore */
-/* -------------------------------------------------------------------------- */
-/*                                  Utilities                                 */
-/* -------------------------------------------------------------------------- */
-/*-----------------------------------------------
-|   Bootstrap Styles
------------------------------------------------*/
-/*!
- * Bootstrap v5.0.0-alpha1 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
-
 @font-face {
   font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(../font/Montserrat/Montserrat-VariableFont_wght.ttf) format('ttf');
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  src: url(../font/Montserrat/Montserrat-VariableFont_wght.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Celinea';
+  src: url(../font/celinea/Celinea.ttf) format('truetype');
 }
 
 :root {
   --bs-blue: #747DEF;
+  --dbs-blue: #03989E;
+  --dbs-pink: #D47E6E;
   --bs-indigo: #6237FF;
   --bs-purple: #A1B0FC;
   --bs-pink: #D42DA3;
@@ -66,7 +52,7 @@
 
 body {
   margin: 0;
-  font-family: "Poppins", "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Montserrat", serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -88,17 +74,17 @@ hr:not([size]) {
   height: 1px;
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+h1, .h1, h3, .h3, h6, .h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-family: "Poppins", "Rubik", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Celinea", serif;
   font-weight: 600;
   line-height: 1.2;
   color: #14183E;
 }
 
 h1, .h1 {
-  font-size: calc(1.3052rem + 0.66244vw);
+  font-size: 5rem;
 }
 
 @media (min-width: 1200px) {
@@ -118,12 +104,12 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  font-size: calc(1.26738rem + 0.20859vw);
+  font-size: 5rem;
 }
 
 @media (min-width: 1200px) {
   h3, .h3 {
-    font-size: 1.42383rem;
+    font-size: 5rem;
   }
 }
 
@@ -246,7 +232,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: var(--bs-font-monospace);
+  font-family: 'Montserrat', 'serif';
   font-size: 1em;
   direction: ltr /* rtl:ignore */;
   unicode-bidi: bidi-override;
@@ -3576,30 +3562,28 @@ fieldset:disabled .btn {
 
 .btn-primary {
   color: #FFFEFE;
-  background-color: #F1A501;
-  border-color: #F1A501;
+  background-color: var(--dbs-blue);
+  border-color: var(--dbs-blue);
 }
 
 .btn-primary:hover {
   color: #FFFEFE;
-  background-color: #cd8c01;
-  border-color: #c18401;
+  background-color: var(--dbs-blue);
+  border-color: var(--dbs-blue);
 }
 
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #FFFEFE;
-  background-color: #cd8c01;
-  border-color: #c18401;
-  -webkit-box-shadow: 0 0 0 0 rgba(243, 178, 39, 0.5);
-  box-shadow: 0 0 0 0 rgba(243, 178, 39, 0.5);
+  background-color: var(--dbs-blue);
+  border-color: var(--dbs-blue);
 }
 
 .btn-check:checked + .btn-primary,
 .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active,
 .show > .btn-primary.dropdown-toggle {
   color: #FFFEFE;
-  background-color: #c18401;
-  border-color: #b57c01;
+  background-color: var(--dbs-blue);
+  border-color: var(--dbs-blue);
 }
 
 .btn-check:checked + .btn-primary:focus,
@@ -6734,7 +6718,7 @@ fieldset:disabled .btn {
   z-index: 1070;
   display: block;
   max-width: 276px;
-  font-family: "Poppins", "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Montserrat", serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -9742,7 +9726,7 @@ fieldset:disabled .btn {
 }
 
 .text-danger {
-  color: #DF6951 !important;
+  color: var(--dbs-pink) !important;
 }
 
 .text-light {
@@ -18691,17 +18675,10 @@ iframe {
 /*-----------------------------------------------
 |   Font family
 -----------------------------------------------*/
-.font-sans-serif {
-  font-family: "Poppins", "Rubik", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+.font-sans-serif .font-base .font-cursive {
+  font-family: "Montserrat", serif;
 }
 
-.font-base {
-  font-family: "Poppins", "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
-.font-cursive {
-  font-family: "Volkhov", "DM Serif Display", cursive;
-}
 
 /*-----------------------------------------------
 |   Error Page
