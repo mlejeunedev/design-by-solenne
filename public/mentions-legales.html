@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr-FR" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Design By Solenne | Graphiste Freelance </title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/pictures/design-by-solenne.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/pictures/design-by-solenne.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/pictures/design-by-solenne.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/pictures/design-by-solenne.png">
+    <link rel="manifest" href="assets/img/favicons/manifest.json">
+
+    <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+    <meta name="theme-color" content="#ffffff">
+    <link href="assets/css/theme.css" rel="stylesheet" />
+</head>
+<body>
+<main class="main" id="top">
+    <div id="header"></div>
+    <section style="padding-top: 7rem;">
+        <div class="bg-holder" style="background-image:url(assets/img/hero/hero-bg.svg);">
+        </div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-12 col-lg-12 text-md-start text-center py-6">
+                    <h1 class="hero-title">Mentions-Légales</h1>
+                    <h3>Édition du site Internet</h3>
+                    <p class="mb-4 fw-medium">Le site Design By Solenne (ci-après "le Site"), accessible à l’adresse
+                        https://designbysolenne.com est édité par Solenne Loury (ci-après "l'Editeur"), microentreprise
+                        dont le siège social est situé à Nantes.
+                        Numéro Siret …………
+                    </p>
+                    <h3>Rédaction du site Internet </h3>
+
+                    <p class="mb-4 fw-medium">Directeur de la publication : Solenne Loury
+                        Contact : 07.77.67.63.41 ; designbysolenne@gmail.com
+                    </p>
+                    <h3>Hébergeur du site Internet</h3>
+
+                    <p class="mb-4 fw-medium">Le Site est hébergé par o2switch, EURL au capital de 100 000 euros, dont
+                        le siège social est situé 224 Boulevard Gustave Flaubert, 63000 Clermont-Ferrand, France,
+                        joignable par le moyen suivant : 0444446040.</p>
+                    <h3>Droit d’auteur</h3>
+
+                    <p class="mb-4 fw-medium">L’ensemble de ce site relève des législations françaises et
+                        internationales sur le droit d’auteur et la propriété intellectuelle. Tous les droits de
+                        reproduction sont réservés, y compris pour les documents iconographiques et photographiques. La
+                        majorité des visuels utilisés pour mes créations sont gratuits et libres de droits.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function loadHeader(){
+            fetch('header.html')
+                .then(response=> response.text())
+                .then(text=> document.getElementById('header').innerHTML = text);
+        }
+        function loadFooter(){
+            fetch('footer.html')
+                .then(response=> response.text())
+                .then(text=> document.getElementById('footer').innerHTML = text);
+        }
+        loadFooter();
+        loadHeader();
+    </script>
+
+    <div id="footer"></div>
+</main>
+
+
+
+<script src="vendors/@popperjs/popper.min.js"></script>
+<script src="vendors/bootstrap/bootstrap.min.js"></script>
+<script src="vendors/is/is.min.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+<script src="vendors/fontawesome/all.min.js"></script>
+<script src="assets/js/theme.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Volkhov:wght@700&amp;display=swap"
+      rel="stylesheet">
+</body>
+</html>
