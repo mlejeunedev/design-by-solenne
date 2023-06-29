@@ -62,6 +62,23 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+/* Custom CSS */
+.dbs-text-blue {
+  color: var(--dbs-blue);
+}
+.dbs-text-pink {
+  color: var(--dbs-pink);
+}
+
+.list-unstyled> li > a:hover, .list-unstyled> li > a:focus, .list-unstyled> li > a:active  {
+  color: var(--dbs-blue)!important;
+}
+
+.footer-link:hover {
+  color: var(--dbs-blue)!important;
+}
+/* End Custom CSS */
+
 hr {
   margin: 1rem 0;
   color: #EEEEEE;
@@ -4703,6 +4720,10 @@ fieldset:disabled .btn {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 
+a.nav-link:hover {
+  color: var(--dbs-blue)!important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .nav-link {
     -webkit-transition: none;
@@ -4712,7 +4733,7 @@ fieldset:disabled .btn {
 }
 
 .nav-link:hover, .nav-link:focus {
-  color: #F1A501;
+  color: var(--dbs-blue);
   text-decoration: none;
 }
 
@@ -4767,7 +4788,7 @@ fieldset:disabled .btn {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #FFFEFE;
-  background-color: #F1A501;
+  background-color: var(--dbs-blue);
 }
 
 .nav-fill > .nav-link,
@@ -19545,7 +19566,7 @@ iframe {
   bottom: 0.625rem;
   width: 6.25rem;
   height: 6.25rem;
-  background-color: #DF6951;
+  background-color: var(--dbs-blue);
   border-radius: 1.875rem 0 0.625rem 0;
   z-index: -1;
   -webkit-transition: all 0.2s ease-in-out;
