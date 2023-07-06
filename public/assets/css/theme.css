@@ -52,7 +52,7 @@
 
 body {
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
   font-family: "Montserrat", serif;
   font-size: 1rem;
   font-weight: 400;
