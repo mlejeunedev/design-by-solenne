@@ -9,7 +9,6 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/pictures/design-by-solenne.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/pictures/design-by-solenne.png">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/pictures/design-by-solenne.png">
-    <link rel="manifest" href="assets/img/favicons/manifest.json">
 
     <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
     <meta name="theme-color" content="#ffffff">
@@ -429,8 +428,8 @@
                   .then(response=> response.text())
                   .then(text=> document.getElementById('footer').innerHTML = text);
         }
-        loadFooter();
         loadHeader();
+        loadFooter();
       </script>
 
       <div id="footer"></div>
